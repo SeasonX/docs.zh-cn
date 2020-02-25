@@ -33,7 +33,7 @@ ms.locfileid: "75937605"
 
 使用 [lambda 声明运算符`=>`](../../language-reference/operators/lambda-operator.md) 从其主体中分离 lambda 参数列表。 若要创建 Lambda 表达式，需要在 Lambda 运算符左侧指定输入参数（如果有），然后在另一侧输入表达式或语句块。
 
-任何 Lambda 表达式都可以转换为[委托](../../language-reference/builtin-types/reference-types.md#the-delegate-type)类型。 Lambda 表达式可以转换的委托类型由其参数和返回值的类型定义。 如果 lambda 表达式不返回值，则可以将其转换为 `Action` 委托类型之一；否则，可将其转换为 `Func` 委托类型之一。 例如，有 2 个参数且不返回值的 Lambda 表达式可转换为 <xref:System.Action%602> 委托。 有 1 个参数且不返回值的 Lambda 表达式可转换为 <xref:System.Func%602> 委托。 以下示例中，lambda 表达式 `x => x * x`（指定名为 `x` 的参数并返回 `x` 平方值）将分配给委托类型的变量：
+任何 Lambda 表达式都可以转换为[委托](../../language-reference/builtin-types/reference-types.md#the-delegate-type)类型。 Lambda 表达式可以转换的委托类型由其参数和返回值的类型定义。 如果 lambda 表达式不返回值，则可以将其转换为 `Action` 委托类型之一；否则，可将其转换为 `Func` 委托类型之一。 例如，有 2 个参数且不返回值的 Lambda 表达式可转换为 <xref:System.Action%602> 委托。 有 1 个参数且返回一个值的 Lambda 表达式可转换为 <xref:System.Func%602> 委托。 以下示例中，lambda 表达式 `x => x * x`（指定名为 `x` 的参数并返回 `x` 平方值）将分配给委托类型的变量：
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
